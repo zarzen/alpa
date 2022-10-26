@@ -27,3 +27,11 @@ RUN . /opt/conda/etc/profile.d/conda.sh && \
     pip3 install cupy-cuda113 && \
     pip3 install alpa && \
     pip3 install jaxlib==0.3.15+cuda113.cudnn820 -f https://alpa-projects.github.io/wheels.html
+
+# install dependencies to run alpa/examples/gpt2
+RUN . /opt/conda/etc/profile.d/conda.sh && \
+    conda activate alpa && \
+    pip install transformers && \
+    pip install datasets && \
+    pip install tokenizers && \
+    pip install tensorflow

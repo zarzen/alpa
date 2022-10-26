@@ -729,10 +729,11 @@ def main():
         return metrics
 
     # Create parallel version of the train and eval step
-    method = alpa.Zero2Parallel(num_micro_batches=training_args.num_micro_batches)
-    p_train_step = alpa.parallelize(train_step,
-                                    method=method,
-                                    donate_argnums=(0,))
+    # method = alpa.Zero2Parallel(num_micro_batches=training_args.num_micro_batches)
+    # p_train_step = alpa.parallelize(train_step,
+    #                                 method=method,
+    #                                 donate_argnums=(0,))
+    p_train_step = alpa.parallelize(train_step)
     p_eval_step = alpa.parallelize(eval_step)
 
     min_batch_size = alpa.get_global_num_devices() * training_args.num_micro_batches

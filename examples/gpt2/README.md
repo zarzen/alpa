@@ -14,6 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
+NOTE: has remove the zero2 method for `alpa.parallelize()`
+
 --------------------------------------------------------------------------------
 
 Adopted from https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling
