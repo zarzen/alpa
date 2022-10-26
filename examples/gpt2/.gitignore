@@ -1,3 +1,4 @@
 huggingface_cache/
+huggingface_cache.tar
 norwegian-gpt2/events.*
 norwegian-gpt2/config.json
